@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const signatureDrinks = [
   {
     index: "01",
@@ -89,7 +91,7 @@ export default function Home() {
     <main>
       <nav className="nav shell" aria-label="Điều hướng chính">
         <a className="brand" href="#top" aria-label="Tiệm Trà Tony - Trang chủ">
-          <span className="brand-mark"><Image src="/tony-logo.jpg" alt="" width={44} height={44} unoptimized /></span>
+          <span className="brand-mark"><Image src={`${basePath}/tony-logo.jpg`} alt="" width={44} height={44} unoptimized /></span>
           <span>Tiệm Trà Tony</span>
         </a>
         <div className="nav-links">
@@ -125,7 +127,7 @@ export default function Home() {
 
         <div className="hero-visual" aria-label="Trà Vải Hoa Hồng đặc trưng">
           <div className="image-frame">
-            <Image src="/tony-hero.png" alt="Ly Trà Vải Hoa Hồng với vải tươi và cánh hoa" fill priority unoptimized sizes="(max-width: 900px) 100vw, 48vw" />
+            <Image src={`${basePath}/tony-hero.png`} alt="Ly Trà Vải Hoa Hồng với vải tươi và cánh hoa" fill priority unoptimized sizes="(max-width: 900px) 100vw, 48vw" />
           </div>
           <div className="floating-card card-top"><span>Signature</span><strong>Trà Vải<br />Hoa Hồng</strong></div>
           <div className="floating-card card-bottom"><span>từ</span><strong>35.000đ</strong></div>
@@ -193,7 +195,7 @@ export default function Home() {
 
       <section className="story shell" id="story">
         <div className="story-image">
-          <Image src="/tony-products.png" alt="Ba món nước đặc trưng của Tiệm Trà Tony" fill unoptimized sizes="(max-width: 900px) 100vw, 55vw" />
+          <Image src={`${basePath}/tony-products.png`} alt="Ba món nước đặc trưng của Tiệm Trà Tony" fill unoptimized sizes="(max-width: 900px) 100vw, 55vw" />
           <div className="story-sticker"><span>made with</span><strong>♥</strong><span>in Thủ Đức</span></div>
         </div>
         <div className="story-copy">
@@ -221,7 +223,7 @@ export default function Home() {
       </section>
 
       <footer className="footer shell">
-        <a className="brand" href="#top"><span className="brand-mark"><Image src="/tony-logo.jpg" alt="" width={40} height={40} unoptimized /></span><span>Tiệm Trà Tony</span></a>
+        <a className="brand" href="#top"><span className="brand-mark"><Image src={`${basePath}/tony-logo.jpg`} alt="" width={40} height={40} unoptimized /></span><span>Tiệm Trà Tony</span></a>
         <p>© 2026 Tony. Một chút ngọt ngào cho ngày của bạn.</p>
         <a href="#top" className="back-top">Lên đầu trang ↑</a>
       </footer>
