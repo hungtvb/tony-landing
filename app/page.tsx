@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ScrollMotion from "@/components/motion/ScrollMotion";
+import TonyCanvas from "@/components/three/TonyCanvas";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -89,6 +91,7 @@ function SparkIcon() {
 export default function Home() {
   return (
     <main>
+      <ScrollMotion />
       <nav className="nav shell" aria-label="Điều hướng chính">
         <a className="brand" href="#top" aria-label="Tiệm Trà Tony - Trang chủ">
           <span className="brand-mark"><Image src={`${basePath}/tony-logo.jpg`} alt="" width={44} height={44} unoptimized /></span>
@@ -129,6 +132,7 @@ export default function Home() {
           <div className="image-frame">
             <Image src={`${basePath}/tony-hero.png`} alt="Ly Trà Vải Hoa Hồng với vải tươi và cánh hoa" fill priority unoptimized sizes="(max-width: 900px) 100vw, 48vw" />
           </div>
+          <div className="hero-scene" aria-hidden="true"><TonyCanvas /></div>
           <div className="floating-card card-top"><span>Signature</span><strong>Trà Vải<br />Hoa Hồng</strong></div>
           <div className="floating-card card-bottom"><span>từ</span><strong>35.000đ</strong></div>
           <div className="orbit orbit-one" />
