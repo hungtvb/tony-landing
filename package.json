@@ -17,10 +17,14 @@
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "drizzle-orm": "0.45.2",
+    "gsap": "^3.15.0",
     "next": "16.2.6",
     "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react-dom": "19.2.6",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
@@ -41,5 +45,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "Ti\u1ec7m Tr\u00e0 Tony"
+  "displayName": "Tiệm Trà Tony"
 }
